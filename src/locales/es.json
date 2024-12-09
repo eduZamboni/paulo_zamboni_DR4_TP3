@@ -1,0 +1,14 @@
+{
+    "welcome": "Bienvenido a Baby Manager",
+    "login": "Iniciar sesión",
+    "signup": "Crear Cuenta",
+    "logout": "Cerrar sesión",
+    "settings": "Configuraciones",
+    "home": "Inicio",
+    "dashboard": "Tablero",
+    "diapers": "Cambios de Pañal",
+    "sleep": "Tiempo de Sueño",
+    "feed": "Alimentación",
+    "language": "Idioma",
+    "saved_success": "¡Guardado con éxito!"
+  }

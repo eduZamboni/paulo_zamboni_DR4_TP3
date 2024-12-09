@@ -1,0 +1,25 @@
+.form-group {
+  margin-bottom: 20px;
+
+  .MuiFormControl-root {
+    width: 100%;
+  }
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.add-event-container {
+  padding: 20px;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  .MuiTextField-root {
+    margin-bottom: 20px;
+  }
+}

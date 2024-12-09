@@ -1,0 +1,13 @@
+.MuiSpeedDial-root {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+
+  .MuiFab-primary {
+    background-color: $primary-color;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}

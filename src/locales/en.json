@@ -1,0 +1,14 @@
+{
+    "welcome": "Welcome to Baby Manager",
+    "login": "Login",
+    "signup": "Sign Up",
+    "logout": "Log Off",
+    "settings": "Settings",
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "diapers": "Diaper Changes",
+    "sleep": "Sleep Time",
+    "feed": "Feeding",
+    "language": "Language",
+    "saved_success": "Saved successfully!"
+  }

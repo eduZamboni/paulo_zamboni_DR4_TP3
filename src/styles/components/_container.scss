@@ -1,0 +1,17 @@
+.container {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1200px;
+  width: 100%;
+  box-sizing: border-box;
+
+  &.header {
+    background-color: $secondary-color;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 20px;
+  }
+
+  &.content {
+    margin-top: 20px;
+  }
+}
