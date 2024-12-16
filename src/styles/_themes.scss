@@ -1,0 +1,11 @@
+.theme-light {
+    @import 'themes/light';
+    background-color: $background-color;
+    color: $text-color;
+  }
+  
+  .theme-dark {
+    @import 'themes/dark';
+    background-color: $background-color;
+    color: $text-color;
+  }

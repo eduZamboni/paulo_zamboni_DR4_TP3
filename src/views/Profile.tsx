@@ -15,7 +15,6 @@ import dayjs, { Dayjs } from "dayjs";
 const Profile: React.FC = () => {
   const navigate = useNavigate();
 
-  const [name, setName] = useState(localStorage.getItem("userName") || "");
   const [email, setEmail] = useState(localStorage.getItem("userEmail") || "");
   const [birthDate, setBirthDate] = useState<Dayjs | null>(
     localStorage.getItem("birthDate") ? dayjs(localStorage.getItem("birthDate")) : null
@@ -23,16 +22,16 @@ const Profile: React.FC = () => {
   const [snackbarOpen, setSnackbarOpen] = useState(false);
 
   const handleSaveProfile = () => {
-    if (!name || !email) {
-      alert("Nome e E-mail são obrigatórios.");
+    if (!email) {
+      alert("E-mail é obrigatório.");
       return;
     }
 
-    localStorage.setItem("userName", name);
     localStorage.setItem("userEmail", email);
     if (birthDate) {
       localStorage.setItem("birthDate", birthDate.toISOString());
     }
+
     setSnackbarOpen(true);
   };
 
@@ -40,23 +39,11 @@ const Profile: React.FC = () => {
     setSnackbarOpen(false);
   };
 
-  const handleLogOff = () => {
-    localStorage.removeItem("token");
-    navigate("/signin");
-  };
-
   return (
     <Container className="profile-page" maxWidth="sm">
       <Typography variant="h4" component="h1" gutterBottom>
         Perfil
       </Typography>
-      <TextField
-        label="Nome"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        fullWidth
-        margin="normal"
-      />
       <TextField
         label="E-mail"
         value={email}
@@ -73,20 +60,12 @@ const Profile: React.FC = () => {
         variant="contained"
         color="primary"
         onClick={handleSaveProfile}
-        style={{ marginRight: "10px" }}
+        style={{ marginRight: "10px", marginTop: "20px" }}
       >
         Salvar
       </Button>
       <Button variant="outlined" onClick={() => navigate("/")}>
         Voltar para Home
-      </Button>
-      <Button
-        variant="contained"
-        color="secondary"
-        onClick={handleLogOff}
-        style={{ marginTop: "20px" }}
-      >
-        LogOff
       </Button>
 
       <Snackbar
